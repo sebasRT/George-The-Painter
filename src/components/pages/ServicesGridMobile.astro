@@ -1,0 +1,160 @@
+---
+import LinkButton from "../ui/linkButton.astro";
+import waves from "../../assets/backgrounds/waves.svg";
+import { Image } from "astro:assets";
+
+import exteriorPainting from "../../assets/images/exteriorPaintingCard.jpeg";
+import interiorPainting from "../../assets/images/interiorPaintingCard.jpeg";
+import drywallRepair from "../../assets/images/drywallRepairCard.jpeg";
+import powerWashing from "../../assets/images/powerWashingCard.jpeg";
+
+import colorPalete from "../../assets/colorPalete.ts";
+
+const emerald950 = colorPalete.emerald[950];
+const emerald500 = colorPalete.emerald[500];
+---
+
+<section id="services" class="relative flex flex-col  sm:hidden ">
+    <Image src={waves} class="absolute top-0 z-0" alt="background-image" />
+
+    <h3 class="flex flex-col text-center text-4xl py-10 font-bold z-10">
+        <span class="text-emerald-50">OUR</span>
+        <span class="text-gray-800">SERVICES</span>
+    </h3>
+    <section
+        id="servicesGrid"
+        class=" grid grid-cols-1 md:grid-cols-2 gap-10 *:shadow-md *:rounded-sm *:bg-white *:z-10 px-3 mx-auto w-full max-w-4xl"
+    >
+        <div class="serviceCard">
+            <figure>
+                <Image src={exteriorPainting} alt="Exterior Painting" />
+            </figure>
+            <div id="cardInfo">
+                <span
+                    class="text-gray-800 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter"
+                    >Exterior Painting</span
+                >
+                <p class="serviceDescription">
+                    Elevate your curb appeal with our expert exterior painting
+                    services. From weather-worn to wow-worthy, we bring <b
+                        >vibrancy</b
+                    >
+                    and <b>protection</b> to your home's exterior with <b
+                        >quality paints</b
+                    >
+                    and <b>skilled craftsmanship</b>.
+                </p>
+                <LinkButton
+                    classes="bg-emerald-500 text-white font-semibold px-5 py-2 text-sm rounded-full hover:scale-105 transition"
+                    url="/exterior-painting"
+                    title="LEARN MORE"
+                />
+            </div>
+        </div>
+        <div class="serviceCard">
+            <figure>
+                <Image src={interiorPainting} alt="Interior Painting" />
+            </figure>
+            <div class="cardInfo">
+                <span
+                    class="text-gray-800 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter"
+                    >Interior Painting</span
+                >
+                <p class="serviceDescription">
+                    Transform your space with a fresh coat of paint! Our
+                    interior painting services <b
+                        >breathe new life into your home or office</b
+                    >, with meticulous attention to detail and a splash of <b
+                        >your favorite colors</b
+                    >.
+                </p>
+                <LinkButton
+                    classes="bg-emerald-500 text-white font-semibold px-5 py-2 text-sm rounded-full hover:scale-105 transition"
+                    url="/interior-painting"
+                    title="LEARN MORE"
+                />
+            </div>
+        </div>
+        <div class="serviceCard">
+            <figure>
+                <Image src={powerWashing} alt="Power Washing" />
+            </figure>
+            <div class="cardInfo">
+                <span
+                    class="text-gray-800 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter"
+                    >Power washing</span
+                >
+                <p class="serviceDescription">
+                    Revitalize your surfaces with our expert power washing
+                    services. Say goodbye to grime, mold, and dirt, and hello to
+                    <b>a fresh, clean look</b>.
+                </p>
+                <!-- <LinkButton
+                    classes="bg-emerald-500 text-white font-semibold px-5 py-2 text-sm rounded-full hover:scale-105 transition"
+                    url="/"
+                    title="LEARN MORE"
+                /> -->
+            </div>
+        </div>
+        <div class="serviceCard">
+            <figure>
+                <Image src={drywallRepair} alt="Exterior Painting" />
+            </figure>
+            <div class="cardInfo">
+                <span
+                    class="text-gray-800 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter"
+                    >Drywall repair</span
+                >
+                <p class="serviceDescription">
+                    Smooth out imperfections and restore your walls with our
+                    <b>professional</b> drywall repair services. From small dents
+                    to major damage, we've got you covered for a <b
+                        >flawless finish</b
+                    >.
+                </p>
+                <!-- <LinkButton
+                    classes="bg-emerald-500 text-white font-semibold px-5 py-2 text-sm rounded-full hover:scale-105 transition"
+                    url="/"
+                    title="LEARN MORE"
+                /> -->
+            </div>
+        </div>
+    </section>
+</section>
+
+<style define:vars={{ emerald950, emerald500 }}>
+
+    .serviceCard {
+        text-align: center;
+        padding: 0.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .serviceCard p {
+        max-width: 15rem;
+        line-height: 1.2rem;
+        margin: 0 auto;
+    }
+    .serviceCard p b {
+        color: var(--emerald500);
+    }
+    .serviceCard figure {
+        width: 100%;
+        height: 15rem;
+    }
+    .serviceCard figure img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .cardInfo {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .serviceDescription {
+        padding: 1.5rem 0;
+    }
+</style>

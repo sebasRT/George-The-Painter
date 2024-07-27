@@ -1,0 +1,11 @@
+---
+interface Props {
+    style?: string,
+   number?: number
+}
+const {  number , style} = Astro.props;
+---
+
+<div class:list={["grid place-items-center rounded-full", style]}>
+    <span>{number}</span>
+</div>

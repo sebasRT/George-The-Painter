@@ -1,0 +1,31 @@
+---
+import brush from "../../assets/icons/brush.svg";
+import roller from "../../assets/icons/roller.svg";
+---
+<section
+    id="hero"
+    class="w-full my-10 relative flex flex-col gap-10 md:gap-20 xl-gap-25 justify-between items-center text-center"
+>
+    <img src={brush.src} class="absolute h-40 md:h-60 lg:h-80 left-10 top-3" />
+    <img
+        src={roller.src}
+        class="absolute h-40 md:h-60 lg:h-80 right-10 bottom-3"
+    />
+    <h2
+        class="max-w-3xl text-3xl sm:text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl font-extrabold text-gray-800"
+    >
+        Brushstrokes made of <span class="text-emerald-500">excellence</span>.
+    </h2>
+    <p class="max-w-md text-xl">
+        Specializing in both <b class="text-gray-800">interior</b> and
+        <b class="text-gray-800">exterior</b> painting, we bring your vision to
+        life, infusing your home with <b class="text-gray-800"
+            >timeless beauty and style.</b
+        >
+    </p>
+    <a
+    href="/contact-form"
+        class="text-xl font-bold px-5 py-2 text-white bg-emerald-500 rounded-full hover:scale-105 transition"
+        >GET QUOTE</a
+    >
+</section>

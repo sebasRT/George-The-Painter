@@ -10,6 +10,6 @@ export default defineConfig({
   integrations: [tailwind(), react(), icon({
     iconDir: "src/assets/icons"
   })],
-  output: "server",
+  output: "hybrid",
   adapter: vercel()
 });

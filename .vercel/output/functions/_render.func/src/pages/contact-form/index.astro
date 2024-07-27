@@ -1,0 +1,32 @@
+---
+import logo from "../../assets/logo.svg";
+import BasicLayout from "../../components/layouts/BasicLayout.astro";
+import { Icon } from "astro-icon/components";
+import GetFreeEstimateForm from "../../components/main/GetFreeEstimateForm";
+---
+
+<BasicLayout title="Contact form">
+    <header class="py-3 flex justify-between items-center">
+        <figure class="w-20 sm:w-32">
+            <a href="/">
+                <img
+                    src={logo.src}
+                    class="w-14 mx-auto"
+                    alt="George the painter logo"
+                />
+            </a>
+        </figure>
+        <div class="mr-3 md:mr-10">
+            <a
+                href="/"
+                class="flex items-center gap-3 text-base sm:text-2xl font-medium"
+            >
+                <Icon name="backArrow" class="text-2xl sm:text-5xl" />
+                HOME
+            </a>
+        </div>
+    </header>
+    <section class="flex-grow">
+        <GetFreeEstimateForm client:load />
+    </section>
+</BasicLayout>

@@ -7,7 +7,6 @@ export interface FreeEstimateInfo {
   email: string,
   services: string[],
   projectDetails: string,
-  // budget: string, 
 }
 type Action = { type: "add"; payload: string } | { type: "remove"; payload: string }
 
@@ -208,11 +207,13 @@ const Input = ({ ...props }: InputHTMLAttributes<HTMLInputElement>) => {
 }
 
 const fetchData = async (body: FreeEstimateInfo) => {
+  const bodyJson = JSON.stringify(body)
+  
   try {
     const res = await fetch("/api/free-estimate-request.json", {
       method: "POST",
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body)
+      body: bodyJson
     }
     )
     return res

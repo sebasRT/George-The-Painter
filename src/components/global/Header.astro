@@ -1,6 +1,6 @@
 ---
 import logo from "../../assets/logo.svg";
-import ServicesDropdown from "./ServicesDropdown.astro"
+import ServicesDropdown from "./ServicesDropdown.tsx"
 ---
 
 <header
@@ -15,7 +15,7 @@ import ServicesDropdown from "./ServicesDropdown.astro"
     <nav
         class="flex-grow bg-gray-800 rounded-s-full flex justify-between m-1.5 mr-0 sm:pl-10 sm:text-base md:text-lg lg:text-xl items-center py-2 font-semibold text-lg *:transition"
     >
-        <ServicesDropdown/>
+        <ServicesDropdown client:load/>
 
         <div class="hidden flex-grow md:flex justify-between">
             <a href="/exterior-painting" class="hover:text-emerald-300">Exterior painting</a>

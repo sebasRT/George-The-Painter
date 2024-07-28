@@ -9,26 +9,25 @@ const mode = import.meta.env.MODE
 export const POST: APIRoute = async ({ request }) => {
 
     const to = mode === "development" ? ['delivered@resend.dev'] : ['info@george-the-painter.com']
-    console.log(mode);
-    
+
     const body = await request.json() as FreeEstimateInfo;
-    
+
 
     const { data, error } = await resend.emails.send({
         from: 'Clients <onboarding@resend.dev>',
         to,
         subject: 'Client requesting estimate',
-        html: `<strong>
-        client & project details:
-         </br>
-         </br>
-        name: ${body.firstName} ${body.lastName}</br>
-        phone: ${body.phone}</br>
-        email: ${body.email}</br>
-        services: ${body.services}</br>
-        project details: ${body.projectDetails}</br>
-        </strong>`,
+        html: `<div>
+	<h5>client & project details:</h5>
+	<p><strong>name: </strong>${body.firstName} ${body.lastName}</p>
+	<p><strong>phone: ${body.phone}</strong></p>
+	<p><strong>email: ${body.email}</strong></p>
+	<p><strong>services required: ${body.services}</strong></p>
+	<p><strong>project details: ${body.projectDetails}</strong></p>
+</div>`,
     });
+
+
 
     if (error) {
         return new Response(

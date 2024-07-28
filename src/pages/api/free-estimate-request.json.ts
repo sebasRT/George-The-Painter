@@ -20,10 +20,10 @@ export const POST: APIRoute = async ({ request }) => {
         html: `<div>
 	<h5>client & project details:</h5>
 	<p><strong>name: </strong>${body.firstName} ${body.lastName}</p>
-	<p><strong>phone: ${body.phone}</strong></p>
-	<p><strong>email: ${body.email}</strong></p>
-	<p><strong>services required: ${body.services}</strong></p>
-	<p><strong>project details: ${body.projectDetails}</strong></p>
+	<p><strong>phone: </strong>${body.phone}</p>
+	<p><strong>email: </strong>${body.email}</p>
+	<p><strong>services required: </strong>${body.services}</p>
+	<p><strong>project details: </strong>${body.projectDetails}</p>
 </div>`,
     });
 

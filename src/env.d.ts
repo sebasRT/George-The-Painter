@@ -2,6 +2,7 @@ interface ImportMetaEnv {
     readonly RESEND_KEY: string;
     readonly PUBLIC_RESEND_KEY: string;
     readonly SITE: string;
+    readonly MODE: "production" | "development";
     // more env variables...
 }
 interface ImportMeta {

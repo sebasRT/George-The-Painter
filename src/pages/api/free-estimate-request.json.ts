@@ -4,14 +4,19 @@ import { Resend } from "resend";
 
 const resend_key = import.meta.env.RESEND_KEY
 const resend = new Resend(resend_key)
+const mode = import.meta.env.MODE
+
 export const POST: APIRoute = async ({ request }) => {
 
-
+    const to = mode === "development" ? ['info@george-the-painter.com'] :['delivered@resend.dev'] 
+    console.log(mode);
+    
     const body = await request.json() as FreeEstimateInfo;
+    
 
     const { data, error } = await resend.emails.send({
         from: 'Acme <onboarding@resend.dev>',
-        to: ['delivered@resend.dev'],
+        to,
         subject: 'Client requesting estimate',
         html: `<strong>
         client & project details:

@@ -8,14 +8,14 @@ const mode = import.meta.env.MODE
 
 export const POST: APIRoute = async ({ request }) => {
 
-    const to = mode === "development" ? ['info@george-the-painter.com'] :['delivered@resend.dev'] 
+    const to = mode === "development" ? ['delivered@resend.dev'] : ['info@george-the-painter.com']
     console.log(mode);
     
     const body = await request.json() as FreeEstimateInfo;
     
 
     const { data, error } = await resend.emails.send({
-        from: 'Acme <onboarding@resend.dev>',
+        from: 'Clients <onboarding@resend.dev>',
         to,
         subject: 'Client requesting estimate',
         html: `<strong>

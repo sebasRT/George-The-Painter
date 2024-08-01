@@ -14,24 +14,18 @@ const emerald950 = colorPalete.emerald[950];
 const emerald500 = colorPalete.emerald[500];
 ---
 
-<section id="services" class="relative flex flex-col  sm:hidden ">
+<section id="services" class="relative flex flex-col sm:hidden">
     <Image src={waves} class="absolute top-0 z-0" alt="background-image" />
-
-    <h3 class="flex flex-col text-center text-4xl py-10 font-bold z-10">
-        <span class="text-emerald-50">OUR</span>
-        <span class="text-gray-800">SERVICES</span>
-    </h3>
     <section
         id="servicesGrid"
-        class=" grid grid-cols-1 md:grid-cols-2 gap-10 *:shadow-md *:rounded-sm *:bg-white *:z-10 px-3 mx-auto w-full max-w-4xl"
+        class="grid grid-cols-1 md:grid-cols-2 gap-10 *:shadow-md *:rounded-sm *:bg-white *:z-10 px-3 mx-auto w-full max-w-4xl pt-10"
     >
         <div class="serviceCard">
-            <figure>
+            <figure class="mb-3">
                 <Image src={exteriorPainting} alt="Exterior Painting" />
             </figure>
             <div id="cardInfo">
-                <span
-                    class="text-gray-800 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter"
+                <span class="text-gray-800 text-4xl mt-3 font-bold font-bebas"
                     >Exterior Painting</span
                 >
                 <p class="serviceDescription">
@@ -56,8 +50,7 @@ const emerald500 = colorPalete.emerald[500];
                 <Image src={interiorPainting} alt="Interior Painting" />
             </figure>
             <div class="cardInfo">
-                <span
-                    class="text-gray-800 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter"
+                <span class="text-gray-800 text-4xl mt-3 font-bold font-bebas"
                     >Interior Painting</span
                 >
                 <p class="serviceDescription">
@@ -80,8 +73,7 @@ const emerald500 = colorPalete.emerald[500];
                 <Image src={powerWashing} alt="Power Washing" />
             </figure>
             <div class="cardInfo">
-                <span
-                    class="text-gray-800 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter"
+                <span class="text-gray-800 text-4xl mt-3 font-bold font-bebas"
                     >Power washing</span
                 >
                 <p class="serviceDescription">
@@ -89,11 +81,11 @@ const emerald500 = colorPalete.emerald[500];
                     services. Say goodbye to grime, mold, and dirt, and hello to
                     <b>a fresh, clean look</b>.
                 </p>
-                <!-- <LinkButton
+                <LinkButton
                     classes="bg-emerald-500 text-white font-semibold px-5 py-2 text-sm rounded-full hover:scale-105 transition"
-                    url="/"
+                    url="/power-washing"
                     title="LEARN MORE"
-                /> -->
+                />
             </div>
         </div>
         <div class="serviceCard">
@@ -101,8 +93,7 @@ const emerald500 = colorPalete.emerald[500];
                 <Image src={drywallRepair} alt="Exterior Painting" />
             </figure>
             <div class="cardInfo">
-                <span
-                    class="text-gray-800 text-3xl md:text-4xl lg:text-5xl font-bold tracking-tighter"
+                <span class="text-gray-800 text-4xl mt-3 font-bold font-bebas"
                     >Drywall repair</span
                 >
                 <p class="serviceDescription">
@@ -112,18 +103,17 @@ const emerald500 = colorPalete.emerald[500];
                         >flawless finish</b
                     >.
                 </p>
-                <!-- <LinkButton
+                <LinkButton
                     classes="bg-emerald-500 text-white font-semibold px-5 py-2 text-sm rounded-full hover:scale-105 transition"
-                    url="/"
+                    url="/drywall-repair"
                     title="LEARN MORE"
-                /> -->
+                />
             </div>
         </div>
     </section>
 </section>
 
 <style define:vars={{ emerald950, emerald500 }}>
-
     .serviceCard {
         text-align: center;
         padding: 0.5rem;

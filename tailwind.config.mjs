@@ -20,6 +20,11 @@ export default {
 			'950': '#0a2916',
 		},
 		'white': '#F9F9F9'
+	},
+	fontFamily: {
+		'antonio' : 'Antonio, sans-serif',
+		'inter': 'Inter, sans-serif',
+		'bebas': ['"Bebas Neue"', 'sans-serif']
 	}
 		},
 	},

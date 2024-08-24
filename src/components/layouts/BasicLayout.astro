@@ -7,7 +7,7 @@ const { title } = Astro.props;
 ---
 
 <html lang="en" class="bg-white-50">
-    <BaseHead title={title}/>
+    <BaseHead title={title} description="Interior & exterior painting services in Morristown NJ (New Jersey) and surroundings."/>
     <body class="h-screen flex flex-col">
        
         <slot />
@@ -16,6 +16,7 @@ const { title } = Astro.props;
 </html>
 <style>
     body{
-        font-family: "Inter", sans-serif
+        font-family: "Inter", sans-serif;
+        font-display: swap;
     }
 </style>

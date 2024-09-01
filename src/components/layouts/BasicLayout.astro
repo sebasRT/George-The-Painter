@@ -1,13 +1,8 @@
 ---
 import BaseHead from "../global/BaseHead.astro";
-interface Props {
-    title: string;
-}
-const { title } = Astro.props;
 ---
 
 <html lang="en" class="bg-white-50">
-    <BaseHead title={title} description="Interior & exterior painting services in Morristown NJ (New Jersey) and surroundings."/>
     <body class="h-screen flex flex-col">
        
         <slot />

@@ -1,4 +1,5 @@
 ---
+import BaseHead from "../../components/global/BaseHead.astro";
 import ContacButtons from "../../components/global/ContacButtons.astro";
 import MainLayout from "../../components/layouts/MainLayout.astro";
 import StepNumber from "../../components/ui/stepNumber.astro";
@@ -7,6 +8,10 @@ const stepNumberStyle =
 ---
 
 <MainLayout title="Exterior painting services">
+    <BaseHead
+        title="Exterior Painting Services | George The Painter LLC"
+        description="Professional exterior painting services in Morristown NJ (New Jersey) and surroundings."
+    />
     <h1 class="flex flex-col text-center text-4xl md:text-7xl font-extrabold">
         <span class="text-gray-800">Exterior painting</span>
         <span class="text-gray-800/50">services</span>
@@ -36,122 +41,47 @@ const stepNumberStyle =
             </p>
         </div>
         <div class="w-1 h-16 bg-emerald-300 rounded-full"></div>
-        <div class="flex flex-col items-center text-center max-w-md">
-            <StepNumber number={3} style={stepNumberStyle} />
-            <h2 class="my-2 text-2xl text-gray-700 font-bold md:text-4xl">
-                Preparation
-            </h2>
-            <p class="font-semibold text-lg md:text-2xl">
-                We follow essential steps to prepare all surfaces before a
-                single paintbrush touches them.
-            </p>
-            <ul
-                class="list-disc text-left my-5 text-lg md:text-xl *:my-5 last:mb-0 leading-5"
-            >
-                <li>
-                    Cleaning the exterior surfaces thoroughly, removing dirt,
-                    debris, and mildew.
-                </li>
-                <li>Scraping off any loose or peeling paint..</li>
-                <li>
-                    Repairing any damaged areas, such as cracks or wood rot, and
-                    allow them to dry completely.
-                </li>
-                <li class="text-emerald-500 font-medium">
-                    <p class="text-black">
-                        Applying primer to bare surfaces or areas with stains to
-                        ensure proper adhesion and coverage of the paint.
-                    </p>
-                </li>
-            </ul>
-        </div>
-        <div class="w-1 h-16 bg-emerald-300 rounded-full"></div>
-        <div class="flex flex-col items-center text-center max-w-md">
-            <StepNumber number={4} style={stepNumberStyle} />
-            <h2 class="mt-2 text-2xl text-gray-700 font-bold md:text-4xl mr">
-                Painting
-            </h2>
-            <section>
-                <div class="flex items-center text-left gap-5 my-5">
-                    <StepNumber style="min-w-5 h-5 bg-emerald-500" />
-                    <span class="flex-grow text-lg md:text-xl font-bold"
-                        >Starting with painting trim and edges using brushes or
-                        edging tools.</span
-                    >
-                </div>
-                <div class="flex items-center text-left gap-5 my-5">
-                    <StepNumber style="min-w-5 h-5 bg-emerald-500" />
-                    <span class="flex-grow text-lg md:text-xl font-bold"
-                        >Using a paint sprayer or roller to apply paint to
-                        larger areas such as siding or stucco.</span
-                    >
-                </div>
-                <div class="flex items-center text-left gap-5 my-5">
-                    <StepNumber style="min-w-5 h-5 bg-emerald-500" />
-                    <span class="flex-grow text-lg md:text-xl font-bold"
-                        >Working in manageable sections, applying paint evenly
-                        and smoothly.</span
-                    >
-                </div>
-                <div class="flex items-center text-left gap-5 my-5">
-                    <StepNumber style="min-w-5 h-5 bg-emerald-500" />
-                    <span class="flex-grow text-lg md:text-xl font-bold"
-                        >Applying additional coats as needed for full coverage
-                        and durability, allowing each coat to dry according to
-                        the paint manufacturer's instructions.</span
-                    >
-                </div>
-            </section>
-        </div>
-        <div class="w-1 h-16 bg-emerald-300 rounded-full"></div>
-        <div class="flex flex-col items-center text-center max-w-md">
-            <StepNumber number={5} style={stepNumberStyle} />
-            <h2 class="my-2 text-2xl text-gray-700 font-bold md:text-4xl">
-                Detailing and Finishing Touches
-            </h2>
-            <section>
-                <div class="flex items-center text-left gap-5 my-5">
-                    <StepNumber style="min-w-5 h-5 bg-emerald-500" />
-                    <span class="flex-grow text-lg md:text-xl font-bold"
-                        >Paying attention to detail, ensuring clean lines and
-                        consistent coverage.</span
-                    >
-                </div>
-                <div class="flex items-center text-left gap-5 my-5">
-                    <StepNumber style="min-w-5 h-5 bg-emerald-500" />
-                    <span class="flex-grow text-lg md:text-xl font-bold"
-                        >Painting doors, windows, shutters, and other features
-                        as requested.</span
-                    >
-                </div>
-                <div class="flex items-center text-left gap-5 my-5">
-                    <StepNumber style="min-w-5 h-5 bg-emerald-500" />
-                    <span class="flex-grow text-lg md:text-xl font-bold"
-                        >Double-checking for any missed spots or imperfections
-                        and touch up as needed.</span
-                    >
-                </div>
-            </section>
-        </div>
-        <div class="w-1 h-16 bg-emerald-300 rounded-full"></div>
-        <div class="flex flex-col items-center text-center max-w-md mb-10">
-            <StepNumber number={6} style={stepNumberStyle} />
-            <h2 class="my-2 text-2xl text-emerald-700 font-bold md:text-4xl">
-                Final inspection
-            </h2>
-            <p class="font-semibold text-lg md:text-2xl">
-                After our own inspection, we will walk you through the space,
-                giving you the opportunity to review our work so we can ensure
-                your <b class="text-emerald-500">total satisfaction</b>.
-            </p>
-        </div>
+        <div class="flex flex-col items-center text-center max-w-md"></div>
     </section>
-    <div class="flex justify-center pt-10 pb-20">
-        <a
-            href="/contact-form"
-            class="animate-bounce bg-emerald-500 text-xl md:text-2xl font-semibold rounded-2xl px-10 py-2 text-white"
-            >Get free estimate</a
-        >
-    </div>
-    <ContacButtons/>
 </MainLayout>
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Exterior Painting",
+        "provider": {
+            "@type": "Organization",
+            "name": "George The Painter LLC",
+            "url": "https://www.george-the-painter.com",
+            "logo": "https://www.george-the-painter.com/logo.png",
+            "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+1-973-886-5345",
+                "contactType": "Customer Service"
+            },
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "189 Speedwell Ave",
+                "addressLocality": "Morristown",
+                "addressRegion": "NJ",
+                "postalCode": "07960",
+                "addressCountry": "US"
+            }
+        },
+        "areaServed": {
+            "@type": "Place",
+            "name": "Morristown, NJ and surroundings",
+            "geo": {
+                "@type": "GeoCircle",
+                "geoMidpoint": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 40.7967,
+                    "longitude": -74.4815
+                },
+                "geoRadius": "30mi"
+            }
+        },
+        "description": "Professional exterior painting services in Morristown NJ (New Jersey) and surroundings."
+    }
+</script>

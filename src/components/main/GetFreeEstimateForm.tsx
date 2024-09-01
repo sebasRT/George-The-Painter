@@ -41,7 +41,6 @@ const GetFreeEstimateForm = () => {
       email: email.toString(),
       services,
       projectDetails: projectDetails.toString(),
-      // budget: 
     }
 
     const res = await fetchData(body)
@@ -66,7 +65,7 @@ const GetFreeEstimateForm = () => {
   }
 }
 
-const Filling = ({ submitHandler, dispatch }: { submitHandler: FormEventHandler<HTMLFormElement>, dispatch: React.Dispatch<Action> }) => (
+const Filling = ({  submitHandler, dispatch }: { submitHandler: FormEventHandler<HTMLFormElement>, dispatch: React.Dispatch<Action> }) => (
   <>
     <h1 className="text-3xl sm:text-4xl mx-10 font-semibold my-5">
       Let's create your <span className="text-emerald-600">Free Estimate</span> !
@@ -200,7 +199,7 @@ const Input = ({ ...props }: InputHTMLAttributes<HTMLInputElement>) => {
 
   return (
     <div className=" p-2 w-fit border-2 has-[:focus]:border-gray-600" ref={input}>
-      <input className="bg-transparent outline-none" {...props} onBlur={validate} autoComplete="off" autoFocus={false} />
+      <input className="bg-transparent outline-none" onBlur={validate} autoComplete="off" autoFocus={false}  {...props} />
     </div>
   )
 

@@ -2,13 +2,15 @@
 import Hero from "../../components/global/Hero.astro";
 import MainLayout from "../../components/layouts/MainLayout.astro";
 import DrywallRepair from "../../assets/images/drywallRepairCard.jpeg";
+import BaseHead from "../../components/global/BaseHead.astro";
 ---
 
 <MainLayout title="Power washing services">
+    <BaseHead title="Drywall Repair Services | George The Painter LLC" description="Professional drywall repair services in Morristown NJ (New Jersey) and surroundings."/>
     <Hero
         img={DrywallRepair}
         alt="Power Washing services"
-        headline="Perfectly smooth walls, every time – professional drywall repair services"
-        subheadline="professional repairs for holes, cracks, and water damage – transform your walls with our expertise."
+        headline="Perfectly smooth walls, every time - professional drywall repair services"
+        subheadline="professional repairs for holes, cracks, and water damage - transform your walls with our expertise."
     />
 </MainLayout>

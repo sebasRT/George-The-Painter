@@ -1,12 +1,16 @@
+---
+import BaseHead from "../global/BaseHead.astro";
+const { title, description } = Astro.props;
+---
+
 <html lang="en" class="bg-white-50">
+    <BaseHead title={title} description={description} />
     <body class="h-screen flex flex-col">
-       
         <slot />
-     
     </body>
 </html>
 <style>
-    body{
+    body {
         font-family: "Inter", sans-serif;
         font-display: swap;
     }

@@ -2,12 +2,13 @@
 interface Props {
     url: string, 
     title: string, 
-    classes: string
+    classes: string,
+    label: string
 }
 
-const {classes, url, title} = Astro.props
+const {classes, url, title, label} = Astro.props
 ---
-<a href={url}>
+<a href={url} aria-label={label}>
     <button class:list={[" uppercase", classes ]}>
         {title}
     </button>

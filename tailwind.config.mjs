@@ -5,6 +5,9 @@ export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		extend: {
+			minHeight: {
+				'view': 'calc(100svh-1rem)'
+			},
 			colors: {
 				'emerald': {
 			'50': '#f2fbf5',

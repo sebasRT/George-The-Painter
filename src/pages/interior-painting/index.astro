@@ -1,6 +1,9 @@
 ---
 import ContacButtons from "../../components/global/ContacButtons.astro";
 import MainLayout from "../../components/layouts/MainLayout.astro";
+import mainLogo from "../../assets/mainLogo.svg";
+import LinkButton from "../../components/ui/linkButton.astro";
+import { Icon } from "astro-icon/components";
 import StepNumber from "../../components/ui/stepNumber.astro";
 const stepNumberStyle =
     "bg-emerald-500 w-10 h-10 text-white text-center text-2xl font-semibold";
@@ -10,10 +13,70 @@ const stepNumberStyle =
     title="Interior Painting Services in Morris County | George The Painter LLC"
     description="Professional Interior painting services in Morris County, NJ."
 >
-    <h1 class="flex flex-col text-center text-4xl md:text-7xl font-extrabold">
-        <span class="text-gray-800">Interior painting</span>
-        <span class="text-gray-800/50">services</span>
-    </h1>
+    <section class="min-h-[calc(100svh-6rem)] grid">
+        <div
+            class="hero bg-gray-400 p-5 md:p-10 flex flex-col md:flex-row gap-20 items-center"
+        >
+            <div>
+                <h1
+                    class="flex flex-col gap-5 text-4xl lg:text-7xl font-extrabold *:text-nowrap text-gray-800"
+                >
+                    <span class="text-center">Interior painting</span>
+                    <span class="text-3xl lg:text-5xl max-w-xl text-center"
+                        >by</span
+                    >
+                </h1>
+                <img
+                    src={mainLogo.src}
+                    class="w-full max-w-xl"
+                    alt="George the painter logo"
+                />
+            </div>
+            <div class="flex flex-col items-center md:items-end gap-10">
+                <p class="text-xl text-gray-800 text-center md:text-right">
+                    <span
+                        class="text-xl lg:text-2xl text-gray-800 text-center md:text-right"
+                        >Bring your vision to life | Professional Interior
+                        painting services in Morris County, NJ.</span
+                    >
+                </p>
+                <LinkButton
+                    url="/contact-form"
+                    title="Get a quote"
+                    classes="bg-emerald-600 text-white font-bold text-xl px-5 rounded-full hover:scale-105"
+                />
+            </div>
+        </div>
+    </section>
+    <section
+        class="why-us grid gap-10 grid-cols-[repeat(auto-fit,_minmax(10rem,_1fr))] items-center text-center *:flex *:flex-col *:items-center *:gap-3 p-10 bg-gray-800 text-gray-50"
+    >
+        <figure>
+            <Icon name="detailAttention" class="text-6xl lg:text-8xl" />
+            <figcaption class="text-base sm:text-2xl text-nowrap">
+                Attention to detail
+            </figcaption>
+        </figure>
+        <figure>
+            <Icon name="efficiency" class="text-6xl lg:text-8xl" />
+            <figcaption class="text-base sm:text-2xl text-nowrap">
+                Efficiency
+            </figcaption>
+        </figure>
+        <figure>
+            <Icon name="reliableService" class="text-6xl lg:text-8xl" />
+            <figcaption class="text-base sm:text-2xl text-nowrap">
+                Reliable Service
+            </figcaption>
+        </figure>
+        <figure>
+            <Icon name="cleanWork" class="text-6xl lg:text-8xl" />
+            <figcaption class="text-base sm:text-2xl text-nowrap">
+                Clean work
+            </figcaption>
+        </figure>
+    </section>
+
     <section class="my-5 mx-2 *:my-3 flex flex-col items-center">
         <div class="flex flex-col items-center text-center max-w-md">
             <StepNumber number={1} style={stepNumberStyle} />
@@ -127,10 +190,10 @@ const stepNumberStyle =
             </p>
         </div>
     </section>
-    <div class="flex animate-bounce justify-center pt-10 pb-20">
+    <div class="flex justify-center pt-10 pb-20">
         <a
             href="/contact-form"
-            class="bg-emerald-500 text-xl md:text-2xl font-semibold rounded-2xl px-10 py-2 text-white"
+            class="bg-emerald-500 text-xl md:text-2xl font-semibold rounded-2xl px-10 py-2 text-white hover:scale-110 transition"
             >Get free estimate</a
         >
     </div>

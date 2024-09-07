@@ -1,5 +1,8 @@
 ---
 import MainLayout from "../../components/layouts/MainLayout.astro";
+import mainLogo from "../../assets/mainLogo.svg";
+import LinkButton from "../../components/ui/linkButton.astro";
+import { Icon } from "astro-icon/components";
 import StepNumber from "../../components/ui/stepNumber.astro";
 const stepNumberStyle =
     "bg-emerald-500 w-10 h-10 text-white text-center text-2xl font-semibold";
@@ -9,10 +12,69 @@ const stepNumberStyle =
     title="Exterior Painting Services in Morris County | George The Painter LLC"
     description="Professional exterior painting services in Morris County, NJ."
 >
-    <h1 class="flex flex-col text-center text-4xl md:text-7xl font-extrabold">
-        <span class="text-gray-800">Exterior painting</span>
-        <span class="text-gray-800/50">services</span>
-    </h1>
+    <section class="min-h-[calc(100svh-6rem)] grid">
+        <div
+            class="hero bg-gray-400 p-5 md:p-10 flex flex-col md:flex-row gap-20 items-center"
+        >
+            <div>
+                <h1
+                    class="flex flex-col gap-5 text-4xl lg:text-7xl font-extrabold *:text-nowrap text-gray-800"
+                >
+                    <span class="text-center">Exterior painting</span>
+                    <span class="text-3xl lg:text-5xl max-w-xl text-center"
+                        >by</span
+                    >
+                </h1>
+                <img
+                    src={mainLogo.src}
+                    class="w-full max-w-xl"
+                    alt="George the painter logo"
+                />
+            </div>
+            <div class="flex flex-col items-center md:items-end gap-10">
+                <p class="text-xl text-gray-800 text-center md:text-right">
+                    <span
+                        class="text-xl lg:text-2xl text-gray-800 text-center md:text-right"
+                        >Bring your vision to life | Professional exterior
+                        painting services in Morris County, NJ.</span
+                    >
+                </p>
+                <LinkButton
+                    url="/contact-form"
+                    title="Get a quote"
+                    classes="bg-emerald-600 text-white font-bold text-xl px-5 rounded-full hover:scale-105"
+                />
+            </div>
+        </div>
+    </section>
+    <section
+        class="why-us grid gap-10 grid-cols-[repeat(auto-fit,_minmax(10rem,_1fr))] items-center text-center *:flex *:flex-col *:items-center *:gap-3 p-10 bg-gray-800 text-gray-50"
+    >
+        <figure>
+            <Icon name="detailAttention" class="text-6xl lg:text-8xl" />
+            <figcaption class="text-base sm:text-2xl text-nowrap">
+                Attention to detail
+            </figcaption>
+        </figure>
+        <figure>
+            <Icon name="efficiency" class="text-6xl lg:text-8xl" />
+            <figcaption class="text-base sm:text-2xl text-nowrap">
+                Efficiency
+            </figcaption>
+        </figure>
+        <figure>
+            <Icon name="reliableService" class="text-6xl lg:text-8xl" />
+            <figcaption class="text-base sm:text-2xl text-nowrap">
+                Reliable Service
+            </figcaption>
+        </figure>
+        <figure>
+            <Icon name="cleanWork" class="text-6xl lg:text-8xl" />
+            <figcaption class="text-base sm:text-2xl text-nowrap">
+                Clean work
+            </figcaption>
+        </figure>
+    </section>
     <section class="my-5 mx-2 *:my-3 flex flex-col items-center">
         <div class="flex flex-col items-center text-center max-w-md">
             <StepNumber number={1} style={stepNumberStyle} />
@@ -38,10 +100,124 @@ const stepNumberStyle =
             </p>
         </div>
         <div class="w-1 h-16 bg-emerald-300 rounded-full"></div>
-        <div class="flex flex-col items-center text-center max-w-md"></div>
+        <div class="flex flex-col items-center text-center max-w-md">
+            <StepNumber number={3} style={stepNumberStyle} />
+            <h2 class="my-2 text-2xl text-gray-700 font-bold md:text-4xl">
+                Preparation
+            </h2>
+            <p class="font-semibold text-lg md:text-2xl">
+                We follow essential steps to prepare all surfaces before a
+                single paintbrush touches them.
+            </p>
+            <ul
+                class="list-disc text-left my-5 text-lg md:text-xl *:my-5 last:mb-0 leading-5"
+            >
+                <li>
+                    Cleaning the exterior surfaces thoroughly, removing dirt,
+                    debris, and mildew.
+                </li>
+                <li>Scraping off any loose or peeling paint..</li>
+                <li>
+                    Repairing any damaged areas, such as cracks or wood rot, and
+                    allow them to dry completely.
+                </li>
+                <li class="text-emerald-500 font-medium">
+                    <p class="text-black">
+                        Applying primer to bare surfaces or areas with stains to
+                        ensure proper adhesion and coverage of the paint.
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="w-1 h-16 bg-emerald-300 rounded-full"></div>
+        <div class="flex flex-col items-center text-center max-w-md">
+            <StepNumber number={4} style={stepNumberStyle} />
+            <h2 class="mt-2 text-2xl text-gray-700 font-bold md:text-4xl mr">
+                Painting
+            </h2>
+            <section>
+                <div class="flex items-center text-left gap-5 my-5">
+                    <StepNumber style="min-w-5 h-5 bg-emerald-500" />
+                    <span class="flex-grow text-lg md:text-xl font-bold"
+                        >Starting with painting trim and edges using brushes or
+                        edging tools.</span
+                    >
+                </div>
+                <div class="flex items-center text-left gap-5 my-5">
+                    <StepNumber style="min-w-5 h-5 bg-emerald-500" />
+                    <span class="flex-grow text-lg md:text-xl font-bold"
+                        >Using a paint sprayer or roller to apply paint to
+                        larger areas such as siding or stucco.</span
+                    >
+                </div>
+                <div class="flex items-center text-left gap-5 my-5">
+                    <StepNumber style="min-w-5 h-5 bg-emerald-500" />
+                    <span class="flex-grow text-lg md:text-xl font-bold"
+                        >Working in manageable sections, applying paint evenly
+                        and smoothly.</span
+                    >
+                </div>
+                <div class="flex items-center text-left gap-5 my-5">
+                    <StepNumber style="min-w-5 h-5 bg-emerald-500" />
+                    <span class="flex-grow text-lg md:text-xl font-bold"
+                        >Applying additional coats as needed for full coverage
+                        and durability, allowing each coat to dry according to
+                        the paint manufacturer's instructions.</span
+                    >
+                </div>
+            </section>
+        </div>
+        <div class="w-1 h-16 bg-emerald-300 rounded-full"></div>
+        <div class="flex flex-col items-center text-center max-w-md">
+            <StepNumber number={5} style={stepNumberStyle} />
+            <h2 class="my-2 text-2xl text-gray-700 font-bold md:text-4xl">
+                Detailing and Finishing Touches
+            </h2>
+            <section>
+                <div class="flex items-center text-left gap-5 my-5">
+                    <StepNumber style="min-w-5 h-5 bg-emerald-500" />
+                    <span class="flex-grow text-lg md:text-xl font-bold"
+                        >Paying attention to detail, ensuring clean lines and
+                        consistent coverage.</span
+                    >
+                </div>
+                <div class="flex items-center text-left gap-5 my-5">
+                    <StepNumber style="min-w-5 h-5 bg-emerald-500" />
+                    <span class="flex-grow text-lg md:text-xl font-bold"
+                        >Painting doors, windows, shutters, and other features
+                        as requested.</span
+                    >
+                </div>
+                <div class="flex items-center text-left gap-5 my-5">
+                    <StepNumber style="min-w-5 h-5 bg-emerald-500" />
+                    <span class="flex-grow text-lg md:text-xl font-bold"
+                        >Double-checking for any missed spots or imperfections
+                        and touch up as needed.</span
+                    >
+                </div>
+            </section>
+        </div>
+        <div class="w-1 h-16 bg-emerald-300 rounded-full"></div>
+        <div class="flex flex-col items-center text-center max-w-md mb-10">
+            <StepNumber number={6} style={stepNumberStyle} />
+            <h2 class="my-2 text-2xl text-emerald-700 font-bold md:text-4xl">
+                Final inspection
+            </h2>
+            <p class="font-semibold text-lg md:text-2xl">
+                After our own inspection, we will walk you through the space,
+                giving you the opportunity to review our work so we can ensure
+                your <b class="text-emerald-500">total satisfaction</b>.
+            </p>
+        </div>
     </section>
+    <div class="flex justify-center pt-10 pb-20">
+        <a
+            href="/contact-form"
+            class="bg-emerald-500 text-xl md:text-2xl font-semibold rounded-2xl px-10 py-2 text-white hover:scale-110 transition"
+            >Get free estimate</a
+        >
+    </div>
 </MainLayout>
-
 <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -82,3 +258,4 @@ const stepNumberStyle =
         "description": "Professional exterior painting services in Morris County, NJ."
     }
 </script>
+<style></style>

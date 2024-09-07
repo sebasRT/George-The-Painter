@@ -27,7 +27,8 @@ export default {
 	fontFamily: {
 		'antonio' : 'Antonio, sans-serif',
 		'inter': 'Inter, sans-serif',
-		'bebas': ['"Bebas Neue"', 'sans-serif']
+		'bebas': ['"Bebas Neue"', 'sans-serif'],
+		'cousine': 'Cousine, monospace',
 	}
 		},
 	},

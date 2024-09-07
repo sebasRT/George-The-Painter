@@ -5,7 +5,7 @@ import LinkButton from "../../components/ui/linkButton.astro";
 import { Icon } from "astro-icon/components";
 import StepNumber from "../../components/ui/stepNumber.astro";
 const stepNumberStyle =
-    "bg-emerald-500 w-10 h-10 text-white text-center text-2xl font-semibold";
+    "bg-emerald-500 text-white text-base font-semibold px-2";
 ---
 
 <MainLayout
@@ -14,7 +14,7 @@ const stepNumberStyle =
 >
     <section class="min-h-[calc(100svh-6rem)] grid">
         <div
-            class="hero bg-gray-400 p-5 md:p-10 flex flex-col md:flex-row gap-20 items-center"
+            class="hero bg-gray-400 p-5 md:p-10 flex flex-col md:flex-row gap-20 items-center justify-between"
         >
             <div>
                 <h1
@@ -75,187 +75,172 @@ const stepNumberStyle =
             </figcaption>
         </figure>
     </section>
-    <section class="my-5 mx-2 *:my-3 flex flex-col items-center">
-        <div class="flex flex-col items-center text-center max-w-md">
+    <section class="p-10 flex flex-col gap-5 text-lg text-gray-800 font-medium bg-gray-200">
+        <h2 class="text-gray-400">Preparation</h2>
+        <p class="font-semibold text-xl">
+            We follow <i>essential steps</i> to prepare all surfaces before a single
+            paintbrush touches them.
+        </p>
+        <ul class="list-disc list-inside *:my-5">
+            <li>
+                Cleaning the exterior surfaces thoroughly, removing dirt,
+                debris, and mildew.
+            </li>
+            <li>Scraping off any loose or peeling paint..</li>
+            <li>
+                Repairing any damaged areas, such as cracks or wood rot, and
+                allow them to dry completely.
+            </li>
+            <li>
+                Applying primer to bare surfaces or areas with stains to ensure
+                proper adhesion and coverage of the paint.
+            </li>
+        </ul>
+    </section>
+    <article class="p-10">
+        <h2 class="text-gray-700 text-2xl font-semibold mt-5">
+            Our step-by-step painting process
+        </h2>
+        <div class="flex items-center gap-3 my-5">
             <StepNumber number={1} style={stepNumberStyle} />
-            <h2 class="my-2 text-2xl text-gray-700 font-bold md:text-4xl">
-                Consultation
-            </h2>
-            <p class="font-semibold text-lg md:text-2xl">
-                We can either visit you or make an online estimate to gather all
-                the details of the project.
-            </p>
+            <span>
+                Starting with painting trim and edges using brushes or edging
+                tools.
+            </span>
         </div>
-        <div class="w-1 h-16 bg-emerald-300 rounded-full"></div>
-        <div class="flex flex-col items-center text-center max-w-md">
+        <div class="flex items-center gap-3 my-5">
             <StepNumber number={2} style={stepNumberStyle} />
-            <h2 class="my-2 text-2xl text-gray-700 font-bold md:text-4xl">
-                Quotation
-            </h2>
-            <p class="font-semibold text-lg md:text-2xl">
-                Provide a <span class="text-emerald-500"
-                    >detailed written estimate</span
-                > outlining the scope of work, materials needed, labor costs, and
-                timeline.
-            </p>
+            <span>
+                Using a paint sprayer or roller to apply paint to larger areas
+                such as siding or stucco.
+            </span>
         </div>
-        <div class="w-1 h-16 bg-emerald-300 rounded-full"></div>
-        <div class="flex flex-col items-center text-center max-w-md">
+        <div class="flex items-center gap-3 my-5">
             <StepNumber number={3} style={stepNumberStyle} />
-            <h2 class="my-2 text-2xl text-gray-700 font-bold md:text-4xl">
-                Preparation
-            </h2>
-            <p class="font-semibold text-lg md:text-2xl">
-                We follow essential steps to prepare all surfaces before a
-                single paintbrush touches them.
-            </p>
-            <ul
-                class="list-disc text-left my-5 text-lg md:text-xl *:my-5 last:mb-0 leading-5"
-            >
-                <li>
-                    Cleaning the exterior surfaces thoroughly, removing dirt,
-                    debris, and mildew.
-                </li>
-                <li>Scraping off any loose or peeling paint..</li>
-                <li>
-                    Repairing any damaged areas, such as cracks or wood rot, and
-                    allow them to dry completely.
-                </li>
-                <li class="text-emerald-500 font-medium">
-                    <p class="text-black">
-                        Applying primer to bare surfaces or areas with stains to
-                        ensure proper adhesion and coverage of the paint.
-                    </p>
-                </li>
-            </ul>
+            <span>
+                Working in manageable sections, applying paint evenly and
+                smoothly.
+            </span>
         </div>
-        <div class="w-1 h-16 bg-emerald-300 rounded-full"></div>
-        <div class="flex flex-col items-center text-center max-w-md">
+        <div class="flex items-center gap-3 my-5">
             <StepNumber number={4} style={stepNumberStyle} />
-            <h2 class="mt-2 text-2xl text-gray-700 font-bold md:text-4xl mr">
-                Painting
-            </h2>
-            <section>
-                <div class="flex items-center text-left gap-5 my-5">
-                    <StepNumber style="min-w-5 h-5 bg-emerald-500" />
-                    <span class="flex-grow text-lg md:text-xl font-bold"
-                        >Starting with painting trim and edges using brushes or
-                        edging tools.</span
-                    >
-                </div>
-                <div class="flex items-center text-left gap-5 my-5">
-                    <StepNumber style="min-w-5 h-5 bg-emerald-500" />
-                    <span class="flex-grow text-lg md:text-xl font-bold"
-                        >Using a paint sprayer or roller to apply paint to
-                        larger areas such as siding or stucco.</span
-                    >
-                </div>
-                <div class="flex items-center text-left gap-5 my-5">
-                    <StepNumber style="min-w-5 h-5 bg-emerald-500" />
-                    <span class="flex-grow text-lg md:text-xl font-bold"
-                        >Working in manageable sections, applying paint evenly
-                        and smoothly.</span
-                    >
-                </div>
-                <div class="flex items-center text-left gap-5 my-5">
-                    <StepNumber style="min-w-5 h-5 bg-emerald-500" />
-                    <span class="flex-grow text-lg md:text-xl font-bold"
-                        >Applying additional coats as needed for full coverage
-                        and durability, allowing each coat to dry according to
-                        the paint manufacturer's instructions.</span
-                    >
-                </div>
-            </section>
+            <span>
+                Applying additional coats as needed for full coverage and
+                durability, allowing each coat to dry according to the paint
+                manufacturer's instructions.
+            </span>
         </div>
-        <div class="w-1 h-16 bg-emerald-300 rounded-full"></div>
-        <div class="flex flex-col items-center text-center max-w-md">
-            <StepNumber number={5} style={stepNumberStyle} />
-            <h2 class="my-2 text-2xl text-gray-700 font-bold md:text-4xl">
-                Detailing and Finishing Touches
-            </h2>
-            <section>
-                <div class="flex items-center text-left gap-5 my-5">
-                    <StepNumber style="min-w-5 h-5 bg-emerald-500" />
-                    <span class="flex-grow text-lg md:text-xl font-bold"
-                        >Paying attention to detail, ensuring clean lines and
-                        consistent coverage.</span
-                    >
-                </div>
-                <div class="flex items-center text-left gap-5 my-5">
-                    <StepNumber style="min-w-5 h-5 bg-emerald-500" />
-                    <span class="flex-grow text-lg md:text-xl font-bold"
-                        >Painting doors, windows, shutters, and other features
-                        as requested.</span
-                    >
-                </div>
-                <div class="flex items-center text-left gap-5 my-5">
-                    <StepNumber style="min-w-5 h-5 bg-emerald-500" />
-                    <span class="flex-grow text-lg md:text-xl font-bold"
-                        >Double-checking for any missed spots or imperfections
-                        and touch up as needed.</span
-                    >
-                </div>
-            </section>
+        <div class="flex justify-center pt-10">
+            <a
+                href="/contact-form"
+                class="bg-emerald-500 text-xl md:text-2xl font-semibold rounded-2xl px-10 py-2 text-white hover:scale-110 transition"
+                >Get free estimate</a
+            >
         </div>
-        <div class="w-1 h-16 bg-emerald-300 rounded-full"></div>
-        <div class="flex flex-col items-center text-center max-w-md mb-10">
-            <StepNumber number={6} style={stepNumberStyle} />
-            <h2 class="my-2 text-2xl text-emerald-700 font-bold md:text-4xl">
-                Final inspection
-            </h2>
-            <p class="font-semibold text-lg md:text-2xl">
-                After our own inspection, we will walk you through the space,
-                giving you the opportunity to review our work so we can ensure
-                your <b class="text-emerald-500">total satisfaction</b>.
-            </p>
+    </article>
+    <section class="bg-gray-200 py-5  text-gray-700">
+        <h2 class="text-center mb-5 text-gray-500 font-medium">Detailing and Finishing Touches</h2>
+        <div class="flex justify-center items-center gap-5 px-10 flex-wrap">
+            <div class="flex items-center gap-3 max-w-xs">
+                <svg
+                    class="text-emerald-500"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="5rem"
+                    height="5rem"
+                    viewBox="0 0 24 24"
+                    ><path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"></path></svg
+                >
+                <span
+                    >Attention to detail, ensuring clean lines and consistent
+                    coverage.</span
+                >
+            </div>
+            <div class="flex items-center gap-3 max-w-xs">
+                <svg
+                    class="text-emerald-500"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="5rem"
+                    height="5rem"
+                    viewBox="0 0 24 24"
+                    ><path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"></path></svg
+                >
+                <span>
+                    Doors, windows, shutters painting and other features as
+                    requested.
+                </span>
+            </div>
+            <div class="flex items-center gap-3 max-w-xs">
+                <svg
+                    class="text-emerald-500"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="5rem"
+                    height="5rem"
+                    viewBox="0 0 24 24"
+                    ><path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M20 6L9 17l-5-5"></path></svg
+                >
+                <span>
+                    Double-checking for any missed spots or imperfections and touch up as needed.
+                </span>
+            </div>
         </div>
     </section>
-    <div class="flex justify-center pt-10 pb-20">
-        <a
-            href="/contact-form"
-            class="bg-emerald-500 text-xl md:text-2xl font-semibold rounded-2xl px-10 py-2 text-white hover:scale-110 transition"
-            >Get free estimate</a
-        >
-    </div>
-</MainLayout>
-<script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Service",
-        "serviceType": "Exterior Painting",
-        "provider": {
-            "@type": "LocalBusiness",
-            "name": "George The Painter LLC",
-            "url": "https://www.george-the-painter.com/exterior-painting",
-            "logo": "https://www.george-the-painter.com/logo.png",
-            "contactPoint": {
-                "@type": "ContactPoint",
-                "telephone": "+1-973-886-5345",
-                "contactType": "Customer Service"
-            },
-            "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "189 Speedwell Ave",
-                "addressLocality": "Morristown",
-                "addressRegion": "NJ",
-                "postalCode": "07960",
-                "addressCountry": "US"
-            }
-        },
-        "areaServed": {
-            "@type": "Place",
-            "name": "Morris County, NJ",
-            "geo": {
-                "@type": "GeoCircle",
-                "geoMidpoint": {
-                    "@type": "GeoCoordinates",
-                    "latitude": 40.7967,
-                    "longitude": -74.4815
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "serviceType": "Exterior Painting",
+            "provider": {
+                "@type": "LocalBusiness",
+                "name": "George The Painter LLC",
+                "url": "https://www.george-the-painter.com/exterior-painting",
+                "logo": "https://www.george-the-painter.com/logo.png",
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+1-973-886-5345",
+                    "contactType": "Customer Service"
                 },
-                "geoRadius": "30mi"
-            }
-        },
-        "description": "Professional exterior painting services in Morris County, NJ."
-    }
-</script>
-<style></style>
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "189 Speedwell Ave",
+                    "addressLocality": "Morristown",
+                    "addressRegion": "NJ",
+                    "postalCode": "07960",
+                    "addressCountry": "US"
+                }
+            },
+            "areaServed": {
+                "@type": "Place",
+                "name": "Morris County, NJ",
+                "geo": {
+                    "@type": "GeoCircle",
+                    "geoMidpoint": {
+                        "@type": "GeoCoordinates",
+                        "latitude": 40.7967,
+                        "longitude": -74.4815
+                    },
+                    "geoRadius": "30mi"
+                }
+            },
+            "description": "Professional exterior painting services in Morris County, NJ."
+        }
+    </script>
+    <style></style>
+</MainLayout>

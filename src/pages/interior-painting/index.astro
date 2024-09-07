@@ -15,7 +15,7 @@ const stepNumberStyle =
 >
     <section class="min-h-[calc(100svh-6rem)] grid">
         <div
-            class="hero bg-gray-400 p-5 md:p-10 flex flex-col md:flex-row gap-20 items-center"
+            class="hero bg-gray-400 p-5 md:p-10 flex flex-col justify-between md:flex-row gap-20 items-center"
         >
             <div>
                 <h1
@@ -76,126 +76,102 @@ const stepNumberStyle =
             </figcaption>
         </figure>
     </section>
+    <section
+        class="p-10 flex flex-col gap-5 text-lg text-gray-800 font-medium bg-gray-200"
+    >
+        <h2 class="text-gray-400">Preparation</h2>
+        <p class="font-semibold text-xl">
+            We follow <i>essential steps</i> to prepare all surfaces before a single
+            paintbrush touches them.
+        </p>
 
-    <section class="my-5 mx-2 *:my-3 flex flex-col items-center">
-        <div class="flex flex-col items-center text-center max-w-md">
-            <StepNumber number={1} style={stepNumberStyle} />
-            <h2 class="my-2 text-2xl text-gray-700 font-bold md:text-4xl">
-                Consultation
-            </h2>
-            <p class="font-semibold text-lg md:text-2xl">
-                We can either visit you or make an online estimate to gather all
-                the details of the project.
-            </p>
-        </div>
-        <div class="w-1 h-16 bg-emerald-300 rounded-full"></div>
-        <div class="flex flex-col items-center text-center max-w-md">
-            <StepNumber number={2} style={stepNumberStyle} />
-            <h2 class="my-2 text-2xl text-gray-700 font-bold md:text-4xl">
-                Quotation
-            </h2>
-            <p class="font-semibold text-lg md:text-2xl">
-                Provide a detailed written estimate outlining the scope of work,
-                materials needed, labor costs, and timeline.
-            </p>
-        </div>
-        <div class="w-1 h-16 bg-emerald-300 rounded-full"></div>
-        <div class="flex flex-col items-center text-center max-w-md">
-            <StepNumber number={3} style={stepNumberStyle} />
-            <h2 class="my-2 text-2xl text-gray-700 font-bold md:text-4xl">
-                Preparation
-            </h2>
-            <p class="font-semibold text-lg md:text-2xl">
-                We follow essential steps to prepare all surfaces before a
-                single paintbrush touches them.
-            </p>
-            <ul
-                class="list-disc text-left my-5 text-lg md:text-xl *:my-5 last:mb-0 leading-5"
-            >
-                <li>
-                    Protect floors, furniture, and fixtures with drop cloths or
-                    plastic sheeting.
-                </li>
-                <li>Remove any obstacles from the painting area.</li>
-                <li>
-                    Clean and prep surfaces by washing, sanding, and patching
-                    holes or cracks
-                </li>
-                <li class="text-emerald-500 font-medium">
-                    <p class="text-black">
-                        Apply primer to bare surfaces or areas with stains to
-                        ensure proper adhesion and coverage of the paint.
-                    </p>
-                </li>
-            </ul>
-        </div>
-        <div class="w-1 h-16 bg-emerald-300 rounded-full"></div>
-        <div class="flex flex-col items-center text-center max-w-md">
-            <StepNumber number={4} style={stepNumberStyle} />
-            <h2 class="mt-2 text-2xl text-gray-700 font-bold md:text-4xl mr">
-                Painting
-            </h2>
-            <section>
-                <div class="flex items-center text-left gap-5 my-5">
-                    <StepNumber style="min-w-5 h-5 bg-emerald-500" />
-                    <span class="flex-grow text-lg md:text-xl font-bold"
-                        >Start with cutting in (painting edges and corners)
-                        using a brush or edging tool.</span
-                    >
-                </div>
-                <div class="flex items-center text-left gap-5 my-5">
-                    <StepNumber style="min-w-5 h-5 bg-emerald-500" />
-                    <span class="flex-grow text-lg md:text-xl font-bold"
-                        >Use a roller to apply paint to larger areas, working in
-                        small sections.</span
-                    >
-                </div>
-                <div class="flex items-center text-left gap-5 my-5">
-                    <StepNumber style="min-w-5 h-5 bg-emerald-500" />
-                    <span class="flex-grow text-lg md:text-xl font-bold"
-                        >Apply additional coats as needed for even coverage,
-                        allowing each coat to dry between applications.</span
-                    >
-                </div>
-                <div class="flex items-center text-left gap-5 my-5">
-                    <StepNumber style="min-w-5 h-5 bg-emerald-500" />
-                    <span class="flex-grow text-lg md:text-xl font-bold"
-                        >Pay attention to detail and ensure smooth, consistent
-                        coverage.</span
-                    >
-                </div>
-            </section>
-        </div>
-        <div class="w-1 h-16 bg-emerald-300 rounded-full"></div>
-        <div class="flex flex-col items-center text-center max-w-md">
-            <StepNumber number={5} style={stepNumberStyle} />
-            <h2 class="my-2 text-2xl text-gray-700 font-bold md:text-4xl">
-                Clean up
-            </h2>
-            <p class="font-semibold text-lg md:text-2xl">
-                We put everything back exactly where we found it while paying
-                close attention to doing a thorough job cleaning the work area.
-            </p>
-        </div>
-        <div class="w-1 h-16 bg-emerald-300 rounded-full"></div>
-        <div class="flex flex-col items-center text-center max-w-md mb-10">
-            <StepNumber number={6} style={stepNumberStyle} />
-            <h2 class="my-2 text-2xl text-gray-700 font-bold md:text-4xl">
-                Final inspection
-            </h2>
-            <p class="font-semibold text-lg md:text-2xl">
-                After our own inspection, we will walk you through the space,
-                giving you the opportunity to review our work so we can ensure
-                your <b class="text-emerald-500">total satisfaction</b>.
-            </p>
-        </div>
+        <ul class="list-disc list-inside *:my-5">
+            <li>
+                Protecting floors, furniture, and fixtures with drop cloths or
+                plastic sheeting.
+            </li>
+            <li>Removing any obstacles from the painting area.</li>
+            <li>
+                Cleaning and preparing surfaces by washing, sanding, and
+                patching holes or cracks.
+            </li>
+            <li>
+                Applying primer to bare surfaces or areas with stains to ensure
+                proper adhesion and coverage of the paint.
+            </li>
+        </ul>
     </section>
-    <div class="flex justify-center pt-10 pb-20">
-        <a
-            href="/contact-form"
-            class="bg-emerald-500 text-xl md:text-2xl font-semibold rounded-2xl px-10 py-2 text-white hover:scale-110 transition"
-            >Get free estimate</a
+    <article class="p-10">
+        <h2 class="text-gray-700 text-2xl font-semibold mt-5">
+            Our step-by-step painting process
+        </h2>
+        <div class="flex items-center gap-3 my-5">
+            <StepNumber number={1} style={stepNumberStyle} />
+            <span>
+                Start with cutting in (painting edges and corners) using a brush
+                or edging tool.
+            </span>
+        </div>
+        <div class="flex items-center gap-3 my-5">
+            <StepNumber number={2} style={stepNumberStyle} />
+            <span>
+                Use a roller to apply paint to larger areas, working in small
+                sections.
+            </span>
+        </div>
+        <div class="flex items-center gap-3 my-5">
+            <StepNumber number={3} style={stepNumberStyle} />
+            <span>
+                Apply additional coats as needed for even coverage, allowing
+                each coat to dry between applications.
+            </span>
+        </div>
+        <div class="flex items-center gap-3 my-5">
+            <StepNumber number={4} style={stepNumberStyle} />
+            <span>
+                Pay attention to detail and ensure smooth, consistent coverage.
+            </span>
+        </div>
+        <div class="flex justify-center pt-10">
+            <a
+                href="/contact-form"
+                class="bg-emerald-500 text-xl md:text-2xl font-semibold rounded-2xl px-10 py-2 text-white hover:scale-110 transition"
+                >Get free estimate</a
+            >
+        </div>
+    </article>
+    <section class="relative p-10 bg-gray-700 text-xl flex flex-col gap-5 items-center">
+        <span class="text-center max-w-lg text-white z-20 p-5 text-base">
+            After our own inspection, we will walk you through the space, giving
+            you the opportunity to review our work so we can ensure your <i>total
+                satisfaction.</i>
+        </span>
+        <svg
+            class="text-emerald-500 absolute opacity-20"
+            xmlns="http://www.w3.org/2000/svg"
+            width="8rem"
+            height="8rem"
+            viewBox="0 0 48 48"
+            ><defs
+                ><mask id="ipTCheckOne0"
+                    ><g
+                        fill="none"
+                        stroke="#fff"
+                        stroke-linejoin="round"
+                        stroke-width="4"
+                        ><path
+                            fill="#555"
+                            d="M24 44a19.94 19.94 0 0 0 14.142-5.858A19.94 19.94 0 0 0 44 24a19.94 19.94 0 0 0-5.858-14.142A19.94 19.94 0 0 0 24 4A19.94 19.94 0 0 0 9.858 9.858A19.94 19.94 0 0 0 4 24a19.94 19.94 0 0 0 5.858 14.142A19.94 19.94 0 0 0 24 44Z"
+                        ></path><path
+                            stroke-linecap="round"
+                            d="m16 24l6 6l12-12"></path></g
+                    ></mask
+                ></defs
+            ><path
+                fill="currentColor"
+                d="M0 0h48v48H0z"
+                mask="url(#ipTCheckOne0)"></path></svg
         >
-    </div>
-    <ContacButtons />
+
+    </section>
 </MainLayout>

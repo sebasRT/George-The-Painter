@@ -1,5 +1,3 @@
-import arrow from "../../assets/icons/arrow.svg";
-
 const ServicesDropdown = () => {
 
     return (
@@ -9,7 +7,9 @@ const ServicesDropdown = () => {
                 className="peer/button pl-5 group peer-checked/checkbox:-z-10 group-hover:text-emerald-100 focus-within:text-emerald-100 transition flex items-center gap-2 mx-auto"
             >
                 Services
-                <img src={arrow.src} className="group-focus-within:fill-emerald-100" />
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 10L12 15L17 10" stroke="#F8F8F8" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
             </button>
             <ul
                 id="dropdown-menu"

@@ -1,52 +1,66 @@
 ---
 import srLogo from "../../assets/srLogo.svg";
-import {Icon} from "astro-icon/components"
+import { Icon } from "astro-icon/components";
 ---
 
-<footer class="w-full p-8 bg-gray-800 text-white flex flex-col md:flex-row">
-    <div class="flex flex-col gap-14 sm:flex-row sm:justify-around md:gap-32">
-        <div class="flex flex-col items-center sm:items-start">
-            <span class="text-xl">SERVICES</span>
-            <ul
-                class="mt-2 md:mt-4 *:md:my-2 *:my-1 font-light *:cursor-pointer text-center sm:text-left w-max"
+<footer
+    class="w-full p-8 bg-gray-800 text-white flex justify-evenly flex-wrap gap-20"
+>
+    <div class="flex flex-col gap-3">
+        <span class="text-xl mb-2">SERVICES</span>
+        <ul
+            class="*:mb-2 font-light *:cursor-pointer sm:text-left w-max"
+        >
+            <li class="hover:text-emerald-400 hover:underline">
+                <a href="/interior-painting">Interior painting</a>
+            </li>
+            <li class="hover:text-emerald-400 hover:underline">
+                <a href="/exterior-painting">Exterior painting</a>
+            </li>
+            <li class="hover:text-emerald-400 hover:underline">
+                <a href="/power-washing">Power washing</a>
+            </li>
+            <li class="hover:text-emerald-400 hover:underline">
+                <a href="/drywall-repair">Drywall repair</a>
+            </li>
+        </ul>
+    </div>
+    <div class="flex flex-col first:mb-2 gap-2">
+        <span class="text-xl mb-2">CONTACT US</span>
+        <div>
+            <a
+                href="tel:19738865345"
+                class="flex items-center gap-2 hover:text-emerald-400 hover:underline"
             >
-            
-                <li class="hover:text-emerald-400 hover:underline">
-                    <a href="/interior-painting">Interior painting</a>
-                </li>
-                <li class="hover:text-emerald-400 hover:underline">
-                    <a href="/exterior-painting">Exterior painting</a>
-                </li>
-                <li class="hover:text-emerald-400 hover:underline">
-                    <a href="/power-washing">Power washing</a>
-                </li>
-                <li class="hover:text-emerald-400 hover:underline">
-                    <a href="/drywall-repair">Drywall repair</a>
-                </li>
-            </ul>
+                <Icon name="phone" class="w-5 h-5" />
+                <span>973-886-5345</span>
+            </a>
         </div>
-        <div class="flex flex-col items-center">
-            <span class="text-xl">CONTACT US</span>
-            <div
-                class="flex h-full my-4 *:w-10 items-center gap-4 "
+        <div>
+            <a
+                href="mailto:jorgeherndz@hotmail.com"
+                class="flex items-center gap-2 hover:text-emerald-400 hover:underline"
             >
-                <a href="https://api.whatsapp.com/send?phone=19738865345" target="_blank" aria-label="Contact via Whatsapp"><Icon name="whatsapp" class="text-4xl hover:text-emerald-400"/></a>
-                <a href="mailto:info@george-the-painter.com" target="_blank" aria-label="Contact via Email"><Icon name="mail" class="text-4xl hover:text-emerald-400"/></a>
-                <a href="tel:+19738865345" target="_blank" aria-label="Contact via phone"><Icon name="phone" class="text-4xl hover:text-emerald-400"/></a>
-            </div>
+                <Icon name="mail" class="w-5 h-5" />
+                <span>jorgeherndz@hotmail.com</span>
+            </a>
         </div>
     </div>
-    <div class="flex flex-grow justify-center md:justify-end md:items-end mt-8">
-        <a href="https://personal-portfolio-sigma-three-30.vercel.app/" target="_blank">
+    <div
+        class="flex self-center justify-center md:justify-end md:items-end mt-8"
+    >
+        <a
+            href="https://sebastian-robayo.vercel.app/"
+            target="_blank"
+        >
             <div
                 class="flex flex-col-reverse md:flex-row items-center gap-2 cursor-pointer"
             >
-
                 <img
                     src={srLogo.src}
                     alt="Sebastian Robayo Logo"
-                    class="inline w-10"
-                    title="Website Developement | Sebastian Robayo"
+                    class="inline w-15"
+                    title="Website Development | Sebastian Robayo"
                 />
             </div>
         </a>

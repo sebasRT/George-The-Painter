@@ -9,146 +9,61 @@ import drywallRepair from "../../assets/images/drywallRepairCard.jpeg";
 import powerWashing from "../../assets/images/powerWashingCard.jpeg";
 
 import colorPalete from "../../assets/colorPalete.ts";
+import { Icon } from "astro-icon/components";
 
 const emerald950 = colorPalete.emerald[950];
 const emerald500 = colorPalete.emerald[500];
 ---
 
-<section id="services" class="relative flex flex-col sm:hidden">
-    <Image src={waves} class="absolute top-0 z-0" alt="background-image" />
-    <section
-        id="servicesGrid"
-        class="grid grid-cols-1 md:grid-cols-2 gap-10 *:shadow-md *:rounded-sm *:bg-white *:z-10 px-3 mx-auto w-full max-w-4xl pt-10"
-    >
-        <div class="serviceCard">
-            <figure class="mb-3">
-                <Image src={exteriorPainting} alt="Exterior Painting" />
-            </figure>
-            <div id="cardInfo">
-                <span class="text-gray-800 text-4xl mt-3 font-bold font-bebas"
-                    >Exterior Painting</span
-                >
-                <p class="serviceDescription">
-                    Elevate your curb appeal with our expert exterior painting
-                    services. From weather-worn to wow-worthy, we bring <b
-                        >vibrancy</b
-                    >
-                    and <b>protection</b> to your home's exterior with <b
-                        >quality paints</b
-                    >
-                    and <b>skilled craftsmanship</b>.
-                </p>
-                <LinkButton
-                    classes="bg-emerald-500 text-white font-semibold px-5 py-2 text-sm rounded-full hover:scale-105 transition"
-                    url="/exterior-painting"
-                    title="LEARN MORE"
-                    label="Learn more about our exterior painting services"
-                />
-            </div>
+<section class="flex flex-col gap-10 bg-emerald-500 *:w-full *:bg-gray-50 p-5">
+    <div class="relative border-4 border-gray-800 rounded-sm">
+        <Image
+            alt="Exterior painting services by George the Painter"
+            src={exteriorPainting}
+            class="object-cover h-96 w-full"
+        />
+        <div
+            class="flex flex-col gap-5 absolute bottom-0 bg-gray-700 text-gray-50 px-10 pt-2 text-center"
+        >
+            <span class="text-lg">
+                We bring vibrancy and protection to your home's exterior with
+                <b>quality paints</b> and skilled craftsmanship.
+            </span>
+            <a href="/exterior-painting" class="text-lg bg-gray-800 group"
+                ><i
+                    class="text-3xl font-antonio group-hover:underline decoration-emerald-500"
+                    >Exterior Painting
+                    <Icon
+                        name="longArrow"
+                        class="inline rotate-90 group-hover:translate-x-5 group-hover:stroke-emerald-500 transition"
+                    />
+                </i>
+            </a>
         </div>
-        <div class="serviceCard">
-            <figure>
-                <Image src={interiorPainting} alt="Interior Painting" />
-            </figure>
-            <div class="cardInfo">
-                <span class="text-gray-800 text-4xl mt-3 font-bold font-bebas"
-                    >Interior Painting</span
-                >
-                <p class="serviceDescription">
-                    Transform your space with a fresh coat of paint! Our
-                    interior painting services <b
-                        >breathe new life into your home or office</b
-                    >, with meticulous attention to detail and a splash of <b
-                        >your favorite colors</b
-                    >.
-                </p>
-                <LinkButton
-                    classes="bg-emerald-500 text-white font-semibold px-5 py-2 text-sm rounded-full hover:scale-105 transition"
-                    url="/interior-painting"
-                    title="LEARN MORE"
-                    label="Learn more about our Interior painting services"
-                />
-            </div>
+    </div>
+    <div class="relative border-4 border-gray-800 rounded-sm">
+        <Image
+            alt="Exterior painting services by George the Painter"
+            src={interiorPainting}
+            class="object-cover h-96 w-full"
+        />
+        <div
+            class="flex flex-col gap-5 absolute bottom-0 bg-gray-700 text-gray-50 px-10 pt-2 text-center"
+        >
+            <span class="text-lg">
+                Transform your space with a fresh coat of paint !,
+                Our interior painting services bring your vision to life.
+            </span>
+            <a href="/exterior-painting" class="text-lg bg-gray-800 group"
+                ><i
+                    class="text-3xl font-antonio group-hover:underline decoration-emerald-500"
+                    >Interior Painting
+                    <Icon
+                        name="longArrow"
+                        class="inline rotate-90 group-hover:translate-x-5 group-hover:stroke-emerald-500 transition"
+                    />
+                </i>
+            </a>
         </div>
-        <div class="serviceCard">
-            <figure>
-                <Image src={powerWashing} alt="Power Washing" />
-            </figure>
-            <div class="cardInfo">
-                <span class="text-gray-800 text-4xl mt-3 font-bold font-bebas"
-                    >Power washing</span
-                >
-                <p class="serviceDescription">
-                    Revitalize your surfaces with our expert power washing
-                    services. Say goodbye to grime, mold, and dirt, and hello to
-                    <b>a fresh, clean look</b>.
-                </p>
-                <LinkButton
-                    classes="bg-emerald-500 text-white font-semibold px-5 py-2 text-sm rounded-full hover:scale-105 transition"
-                    url="/contact-form"
-                    title="GET SERVICE"
-                    label="Request power washing services"
-                />
-            </div>
-        </div>
-        <div class="serviceCard">
-            <figure>
-                <Image src={drywallRepair} alt="Exterior Painting" />
-            </figure>
-            <div class="cardInfo">
-                <span class="text-gray-800 text-4xl mt-3 font-bold font-bebas"
-                    >Drywall repair</span
-                >
-                <p class="serviceDescription">
-                    Smooth out imperfections and restore your walls with our
-                    <b>professional</b> drywall repair services. From small dents
-                    to major damage, we've got you covered for a <b
-                        >flawless finish</b
-                    >.
-                </p>
-                <LinkButton
-                    classes="bg-emerald-500 text-white font-semibold px-5 py-2 text-sm rounded-full hover:scale-105 transition"
-                    url="/drywall-repair"
-                    title="GET SERVICE"
-                    label="Request drywall repair service"
-                />
-            </div>
-        </div>
-    </section>
+    </div>
 </section>
-
-<style define:vars={{ emerald950, emerald500 }}>
-    .serviceCard {
-        text-align: center;
-        padding: 0.5rem;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .serviceCard p {
-        max-width: 15rem;
-        line-height: 1.2rem;
-        margin: 0 auto;
-    }
-    .serviceCard p b {
-        color: var(--emerald500);
-    }
-    .serviceCard figure {
-        width: 100%;
-        height: 15rem;
-    }
-    .serviceCard figure img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    .cardInfo {
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-    .serviceDescription {
-        padding: 1.5rem 0;
-    }
-</style>

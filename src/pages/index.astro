@@ -1,14 +1,17 @@
 ---
-import MainLayout from "../components/layouts/MainLayout.astro"; 
+import MainLayout from "../components/layouts/MainLayout.astro";
 import ContacButtons from "../components/global/ContacButtons.astro";
 import ServicesGridMobile from "../components/pages/ServicesGridMobile.astro";
 import ServicesGridDesktop from "../components/pages/ServicesGridDesktop.astro";
 import HeroSection from "../components/pages/HeroSection.astro";
 ---
 
-<MainLayout title="George the Painter LLC" description="Interior & exterior painting services in Morris County.">
-	<HeroSection/>
-		<ServicesGridMobile/>
-		<ServicesGridDesktop/>
-		<ContacButtons/>
+<MainLayout
+	title="George the Painter LLC"
+	description="Interior & exterior painting services in Morris County."
+>
+	<HeroSection />
+	<ServicesGridMobile />
+	<ServicesGridDesktop />
+	<ContacButtons />
 </MainLayout>

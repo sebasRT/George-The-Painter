@@ -4,20 +4,21 @@ import ServicesDropdown from "./ServicesDropdown.tsx"
 ---
 
 <header
-    class="py-3 flex justify-between items-center sticky top-0 z-50 bg-white/50 backdrop-blur-sm"
+    class="py-3 flex justify-center items-center sticky top-0 z-50 b bg-gray-800
+     backdrop-blur-sm"
 >
-    <figure class="w-20 sm:w-32">
+    <figure class="w-20 sm:w-32 md:w-44">
         <a href="/">
             <img src={logo.src} class="w-14 mx-auto" alt="George the painter logo"/>
         </a>
     </figure>
 
     <nav
-        class="flex-grow text-gray-50 bg-gray-800 rounded-s-full flex justify-between m-1.5 mr-0 sm:pl-10 sm:text-base md:text-lg lg:text-xl items-center py-2 font-semibold text-lg *:transition"
+        class="max-w-7xl flex-grow text-gray-50 rounded-s-full flex justify-between m-1.5 mr-0 sm:pl-10 sm:text-base md:text-lg lg:text-xl items-center py-2 text-lg *:transition"
     >
         <ServicesDropdown client:load/>
 
-        <div class="hidden flex-grow md:flex justify-between">
+        <div class="hidden flex-grow xl:flex justify-between">
             <a href="/exterior-painting" class="hover:text-emerald-300">Exterior painting</a>
             <a href="/interior-painting" class="hover:text-emerald-300">Interior painting</a>
             <a href="/power-washing" class="hover:text-emerald-300">Power washing</a>
@@ -25,8 +26,8 @@ import ServicesDropdown from "./ServicesDropdown.tsx"
         </div>
         <a
             href="/contact-form"
-            class="bg-emerald-600 px-5 hidden sm:block md:px-10 mx-5 md:mx-10 rounded-full py-1 text-base md:text-xl text-center hover:scale-105"
-            >Get free estimate</a
+            class="bg-emerald-600 px-5 hidden rounded-full sm:block md:px-10 mx-5 md:mx-10 py-1 text-base md:text-xl text-center hover:scale-105"
+            >GET FREE ESTIMATE</a
         >
         <a
             href="/contact-form"
@@ -38,11 +39,11 @@ import ServicesDropdown from "./ServicesDropdown.tsx"
 
 <style>
     a {
-        font-weight: 600;
+        font-weight: 500;
         color: white;
     }
     * {
         color: white;
-    }
+    } 
     
 </style>

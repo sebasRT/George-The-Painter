@@ -1,7 +1,7 @@
 const ServicesDropdown = () => {
 
     return (
-        <div className="md:hidden">
+        <div className="xl:hidden">
             <button
                 id="dropdown-button"
                 className="peer/button pl-5 group peer-checked/checkbox:-z-10 group-hover:text-emerald-100 focus-within:text-emerald-100 transition flex items-center gap-2 mx-auto"

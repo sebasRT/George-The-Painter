@@ -5,296 +5,284 @@ import LinkButton from "../../components/ui/linkButton.astro";
 import { Icon } from "astro-icon/components";
 import StepNumber from "../../components/ui/stepNumber.astro";
 const stepNumberStyle =
-    "bg-emerald-500 text-white text-base font-semibold px-2";
+  "bg-emerald-500 text-white text-base font-semibold px-2";
 ---
 
 <MainLayout
-    title="Exterior Painting Services in Morris County | George The Painter LLC"
-    description="Professional exterior painting services in Morris County, NJ."
+  title="Exterior Painting Services in Morris County | George The Painter LLC"
+  description="Professional exterior painting services in Morris County, NJ."
 >
-    <section class="min-h-[calc(100svh-6rem)] grid">
-        <div
-            class="hero bg-gray-300 p-5 md:p-10 flex flex-col md:flex-row gap-20 items-center justify-between"
+  <section class="min-h-[calc(100svh-6rem)] grid">
+    <div
+      class="hero  bg-gray-300 p-5 md:p-10 flex flex-col md:flex-row gap-20 items-center justify-evenly"
+    >
+      <div>
+        <h1
+          class="flex flex-col gap-5 text-4xl lg:text-7xl font-extrabold *:text-nowrap text-gray-800"
         >
-            <div>
-                <h1
-                    class="flex flex-col gap-5 text-4xl lg:text-7xl font-extrabold *:text-nowrap text-gray-800"
-                >
-                    <span class="text-center">Exterior painting</span>
-                    <span class="text-3xl lg:text-5xl max-w-xl text-center"
-                        >by</span
-                    >
-                </h1>
-                <img
-                    src={mainLogo.src}
-                    class="w-full max-w-xl drop-shadow-xl"
-                    alt="George the painter logo"
-                />
-            </div>
-            <div class="flex flex-col items-center md:items-end gap-10">
-                <p class="text-xl text-gray-800 text-center md:text-right">
-                    <span
-                        class="text-xl lg:text-2xl text-gray-800 text-center md:text-right"
-                        >Bring your vision to life | Professional exterior
-                        painting services in Morris County, NJ.</span
-                    >
-                </p>
-                <LinkButton
-                    url="/contact-form"
-                    title="Get a quote"
-                    classes="bg-emerald-600 text-white font-bold text-xl px-5 rounded-full hover:scale-105"
-                    label="Get a quote for exterior painting services"
-                />
-            </div>
-        </div>
-    </section>
-    <section
-        class="why-us grid gap-10 grid-cols-[repeat(auto-fit,_minmax(10rem,_1fr))] items-center text-center *:flex *:flex-col *:items-center *:gap-3 p-10 bg-gray-800 text-gray-50"
-    >
-        <figure>
-            <Icon name="detailAttention" class="text-6xl lg:text-8xl" />
-            <figcaption class="text-base sm:text-2xl text-nowrap">
-                Attention to detail
-            </figcaption>
-        </figure>
-        <figure>
-            <Icon name="efficiency" class="text-6xl lg:text-8xl" />
-            <figcaption class="text-base sm:text-2xl text-nowrap">
-                Efficiency
-            </figcaption>
-        </figure>
-        <figure>
-            <Icon name="reliableService" class="text-6xl lg:text-8xl" />
-            <figcaption class="text-base sm:text-2xl text-nowrap">
-                Reliable Service
-            </figcaption>
-        </figure>
-        <figure>
-            <Icon name="cleanWork" class="text-6xl lg:text-8xl" />
-            <figcaption class="text-base sm:text-2xl text-nowrap">
-                Clean work
-            </figcaption>
-        </figure>
-    </section>
-    <section
-        class="p-10 flex flex-col gap-5 text-lg text-gray-800 font-medium bg-gray-200"
-    >
-        <h2 class="text-gray-400">Preparation</h2>
-        <p class="font-semibold text-xl">
-            I follow <i>essential steps</i> to prepare all surfaces before a single
-            paintbrush touches them.
+          <span class="text-center">Exterior painting</span>
+          <span class="text-3xl lg:text-5xl max-w-xl text-center">by</span>
+        </h1>
+        <img
+          src={mainLogo.src}
+          class="w-full max-w-xl drop-shadow-xl"
+          alt="George the painter logo"
+        />
+      </div>
+      <div class="flex flex-col items-center md:items-end gap-10">
+        <p class="text-xl text-gray-800 text-center md:text-right">
+          <span
+            class="text-xl lg:text-2xl text-gray-800 text-center md:text-right"
+            >Bring your vision to life | Professional exterior painting services
+            in Morris County, NJ.</span
+          >
         </p>
-        <ul class="list-disc list-inside *:my-5">
-            <li>
-                Cleaning the exterior surfaces thoroughly, removing dirt,
-                debris, and mildew.
-            </li>
-            <li>Scraping off any loose or peeling paint..</li>
-            <li>
-                Repairing any damaged areas, such as cracks or wood rot, and
-                allow them to dry completely.
-            </li>
-            <li>
-                Applying primer to bare surfaces or areas with stains to ensure
-                proper adhesion and coverage of the paint.
-            </li>
-        </ul>
-    </section>
-    <section class="grid gap-20 grid-flow-col place-items-center max-w-md my-10 mx-auto ">
-        <div class="flex flex-col items-center text-center">
-            <span class="text-gray-500 my-2">Experience</span>
-            <p class="text-gray-800 text-7xl">20<b class="text-emerald-500">+</b></p>
-            <span class="text-gray-500 text-sm">Years</span>
-        </div>
-        <div class="flex flex-col items-center text-center">
-            <span class="text-gray-500 my-2">Projects</span>
-            <p class="text-gray-800 text-7xl">300<b class="text-emerald-500">+</b></p>
-            <span class="text-gray-500/0 text-sm"> Completed </span>
-        </div>
-    </section>
-    <article class="p-10  text-lg">
-        <h2 class="text-gray-700 text-2xl font-semibold mt-5">
-            Step-by-step painting process
-        </h2>
-        <div class="flex items-center gap-3 my-5">
-            <StepNumber number={1} style={stepNumberStyle} />
-            <span>
-                Starting with painting trim and edges using brushes or edging
-                tools.
-            </span>
-        </div>
-        <div class="flex items-center gap-3 my-5">
-            <StepNumber number={2} style={stepNumberStyle} />
-            <span>
-                Using a paint sprayer or roller to apply paint to larger areas
-                such as siding or stucco.
-            </span>
-        </div>
-        <div class="flex items-center gap-3 my-5">
-            <StepNumber number={3} style={stepNumberStyle} />
-            <span>
-                Working in manageable sections, applying paint evenly and
-                smoothly.
-            </span>
-        </div>
-        <div class="flex items-center gap-3 my-5">
-            <StepNumber number={4} style={stepNumberStyle} />
-            <span>
-                Applying additional coats as needed for full coverage and
-                durability, allowing each coat to dry according to the paint
-                manufacturer's instructions.
-            </span>
-        </div>
-        <div class="flex justify-center pt-10">
-            <a
-                href="/contact-form"
-                class="bg-emerald-500 text-xl md:text-2xl font-semibold rounded-2xl px-10 py-2 text-white hover:scale-110 transition"
-                >Get free estimate</a
-            >
-        </div>
-    </article>
-    <section class="bg-gray-200 py-5 text-gray-700">
-        <h2 class="text-center mb-5 text-gray-500 font-medium">
-            Detailing and Finishing Touches
-        </h2>
-        <div class="flex justify-center items-center gap-5 px-10 flex-wrap">
-            <div class="flex items-center gap-3 max-w-xs">
-                <svg
-                    class="text-emerald-500"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="5rem"
-                    height="5rem"
-                    viewBox="0 0 24 24"
-                    ><path
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M20 6L9 17l-5-5"></path></svg
-                >
-                <span
-                    >Attention to detail, ensuring clean lines and consistent
-                    coverage.</span
-                >
-            </div>
-            <div class="flex items-center gap-3 max-w-xs">
-                <svg
-                    class="text-emerald-500"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="5rem"
-                    height="5rem"
-                    viewBox="0 0 24 24"
-                    ><path
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M20 6L9 17l-5-5"></path></svg
-                >
-                <span>
-                    Doors, windows, shutters painting and other features as
-                    requested.
-                </span>
-            </div>
-            <div class="flex items-center gap-3 max-w-xs">
-                <svg
-                    class="text-emerald-500"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="5rem"
-                    height="5rem"
-                    viewBox="0 0 24 24"
-                    ><path
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M20 6L9 17l-5-5"></path></svg
-                >
-                <span>
-                    Double-checking for any missed spots or imperfections and
-                    touch up as needed.
-                </span>
-            </div>
-        </div>
-    </section>
-    <section
-        class="relative p-10 bg-gray-700 text-xl flex flex-col gap-5 items-center"
-    >
-        <span class="text-center max-w-lg text-white z-20 p-5 text-base">
-            After our my inspection, I will walk you through the space, giving
-            you the opportunity to review the work so I can ensure your <i
-                >total satisfaction.</i
-            >
-        </span>
+        <LinkButton
+          url="/contact-form"
+          title="Get a quote"
+          classes="bg-emerald-600 text-white font-medium text-2xl  py-2 px-5 rounded-full hover:scale-105"
+          label="Get a quote for exterior painting services"
+        />
+      </div>
+    </div>
+  </section>
+  <section
+    class="why-us grid gap-10 grid-cols-[repeat(auto-fit,_minmax(10rem,_1fr))] items-center text-center *:flex *:flex-col *:items-center *:gap-3 p-10 bg-gray-800 text-gray-50"
+  >
+    <figure>
+      <Icon name="detailAttention" class="text-6xl lg:text-8xl" />
+      <figcaption class="text-base sm:text-2xl text-nowrap">
+        Attention to detail
+      </figcaption>
+    </figure>
+    <figure>
+      <Icon name="efficiency" class="text-6xl lg:text-8xl" />
+      <figcaption class="text-base sm:text-2xl text-nowrap">
+        Efficiency
+      </figcaption>
+    </figure>
+    <figure>
+      <Icon name="reliableService" class="text-6xl lg:text-8xl" />
+      <figcaption class="text-base sm:text-2xl text-nowrap">
+        Reliable Service
+      </figcaption>
+    </figure>
+    <figure>
+      <Icon name="cleanWork" class="text-6xl lg:text-8xl" />
+      <figcaption class="text-base sm:text-2xl text-nowrap">
+        Clean work
+      </figcaption>
+    </figure>
+  </section>
+  <section
+    class="p-10 flex flex-col gap-5 text-lg text-gray-800 font-medium bg-gray-200"
+  >
+    <h2 class="text-gray-400">Preparation</h2>
+    <p class="font-semibold text-xl">
+      I follow <i>essential steps</i> to prepare all surfaces before a single paintbrush
+      touches them.
+    </p>
+    <ul class="list-disc list-inside *:my-5">
+      <li>
+        Cleaning the exterior surfaces thoroughly, removing dirt, debris, and
+        mildew.
+      </li>
+      <li>Scraping off any loose or peeling paint..</li>
+      <li>
+        Repairing any damaged areas, such as cracks or wood rot, and allow them
+        to dry completely.
+      </li>
+      <li>
+        Applying primer to bare surfaces or areas with stains to ensure proper
+        adhesion and coverage of the paint.
+      </li>
+    </ul>
+  </section>
+  <section
+    class="grid gap-20 grid-flow-col place-items-center max-w-md my-10 mx-auto"
+  >
+    <div class="flex flex-col items-center text-center">
+      <span class="text-gray-500 my-2">Experience</span>
+      <p class="text-gray-800 text-4xl sm:text-5xl md:text-6xl lg:text-7xl">20<b class="text-emerald-500">+</b></p>
+      <span class="text-gray-500 text-sm">Years</span>
+    </div>
+    <div class="flex flex-col items-center text-center">
+      <span class="text-gray-500 my-2">Projects</span>
+      <p class="text-gray-800 text-4xl sm:text-5xl md:text-6xl lg:text-7xl">300<b class="text-emerald-500">+</b></p>
+      <span class="text-gray-500/0 text-sm"> Completed </span>
+    </div>
+  </section>
+  <article class="p-10 text-lg">
+    <h2 class="text-gray-700 text-2xl font-semibold mt-5">
+      Step-by-step painting process
+    </h2>
+    <div class="flex items-center gap-3 my-5">
+      <StepNumber number={1} style={stepNumberStyle} />
+      <span>
+        Starting with painting trim and edges using brushes or edging tools.
+      </span>
+    </div>
+    <div class="flex items-center gap-3 my-5">
+      <StepNumber number={2} style={stepNumberStyle} />
+      <span>
+        Using a paint sprayer or roller to apply paint to larger areas such as
+        siding or stucco.
+      </span>
+    </div>
+    <div class="flex items-center gap-3 my-5">
+      <StepNumber number={3} style={stepNumberStyle} />
+      <span>
+        Working in manageable sections, applying paint evenly and smoothly.
+      </span>
+    </div>
+    <div class="flex items-center gap-3 my-5">
+      <StepNumber number={4} style={stepNumberStyle} />
+      <span>
+        Applying additional coats as needed for full coverage and durability,
+        allowing each coat to dry according to the paint manufacturer's
+        instructions.
+      </span>
+    </div>
+    <div class="flex justify-center pt-10">
+      <a
+        href="/contact-form"
+        class="bg-emerald-500 text-xl md:text-2xl font-semibold rounded-2xl px-10 py-2 text-white hover:scale-110 transition"
+        >Get free estimate</a
+      >
+    </div>
+  </article>
+  <section class="bg-gray-200 py-5 text-gray-700">
+    <h2 class="text-center mb-5 text-gray-500 font-medium">
+      Detailing and Finishing Touches
+    </h2>
+    <div class="flex justify-center items-center gap-5 px-10 flex-wrap">
+      <div class="flex items-center gap-3 max-w-xs">
         <svg
-            class="text-emerald-500 absolute opacity-20"
-            xmlns="http://www.w3.org/2000/svg"
-            width="8rem"
-            height="8rem"
-            viewBox="0 0 48 48"
-            ><defs
-                ><mask id="ipTCheckOne0"
-                    ><g
-                        fill="none"
-                        stroke="#fff"
-                        stroke-linejoin="round"
-                        stroke-width="4"
-                        ><path
-                            fill="#555"
-                            d="M24 44a19.94 19.94 0 0 0 14.142-5.858A19.94 19.94 0 0 0 44 24a19.94 19.94 0 0 0-5.858-14.142A19.94 19.94 0 0 0 24 4A19.94 19.94 0 0 0 9.858 9.858A19.94 19.94 0 0 0 4 24a19.94 19.94 0 0 0 5.858 14.142A19.94 19.94 0 0 0 24 44Z"
-                        ></path><path
-                            stroke-linecap="round"
-                            d="m16 24l6 6l12-12"></path></g
-                    ></mask
-                ></defs
-            ><path
-                fill="currentColor"
-                d="M0 0h48v48H0z"
-                mask="url(#ipTCheckOne0)"></path></svg
+          class="text-emerald-500"
+          xmlns="http://www.w3.org/2000/svg"
+          width="5rem"
+          height="5rem"
+          viewBox="0 0 24 24"
+          ><path
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M20 6L9 17l-5-5"></path></svg
         >
-    </section>
+        <span
+          >Attention to detail, ensuring clean lines and consistent coverage.</span
+        >
+      </div>
+      <div class="flex items-center gap-3 max-w-xs">
+        <svg
+          class="text-emerald-500"
+          xmlns="http://www.w3.org/2000/svg"
+          width="5rem"
+          height="5rem"
+          viewBox="0 0 24 24"
+          ><path
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M20 6L9 17l-5-5"></path></svg
+        >
+        <span>
+          Doors, windows, shutters painting and other features as requested.
+        </span>
+      </div>
+      <div class="flex items-center gap-3 max-w-xs">
+        <svg
+          class="text-emerald-500"
+          xmlns="http://www.w3.org/2000/svg"
+          width="5rem"
+          height="5rem"
+          viewBox="0 0 24 24"
+          ><path
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M20 6L9 17l-5-5"></path></svg
+        >
+        <span>
+          Double-checking for any missed spots or imperfections and touch up as
+          needed.
+        </span>
+      </div>
+    </div>
+  </section>
+  <section
+    class="relative p-10 bg-gray-700 text-xl flex flex-col gap-5 items-center"
+  >
+    <span class="text-center max-w-lg text-white z-20 p-5 text-base">
+      After our my inspection, I will walk you through the space, giving you the
+      opportunity to review the work so I can ensure your <i
+        >total satisfaction.</i
+      >
+    </span>
+    <svg
+      class="text-emerald-500 absolute opacity-20"
+      xmlns="http://www.w3.org/2000/svg"
+      width="8rem"
+      height="8rem"
+      viewBox="0 0 48 48"
+      ><defs
+        ><mask id="ipTCheckOne0"
+          ><g fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="4"
+            ><path
+              fill="#555"
+              d="M24 44a19.94 19.94 0 0 0 14.142-5.858A19.94 19.94 0 0 0 44 24a19.94 19.94 0 0 0-5.858-14.142A19.94 19.94 0 0 0 24 4A19.94 19.94 0 0 0 9.858 9.858A19.94 19.94 0 0 0 4 24a19.94 19.94 0 0 0 5.858 14.142A19.94 19.94 0 0 0 24 44Z"
+            ></path><path stroke-linecap="round" d="m16 24l6 6l12-12"></path></g
+          ></mask
+        ></defs
+      ><path fill="currentColor" d="M0 0h48v48H0z" mask="url(#ipTCheckOne0)"
+      ></path></svg
+    >
+  </section>
 
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "serviceType": "Exterior Painting",
-            "provider": {
-                "@type": "LocalBusiness",
-                "name": "George The Painter LLC",
-                "url": "https://www.george-the-painter.com/exterior-painting",
-                "logo": "https://www.george-the-painter.com/logo.png",
-                "contactPoint": {
-                    "@type": "ContactPoint",
-                    "telephone": "+1-973-886-5345",
-                    "contactType": "Customer Service"
-                },
-                "address": {
-                    "@type": "PostalAddress",
-                    "streetAddress": "189 Speedwell Ave",
-                    "addressLocality": "Morristown",
-                    "addressRegion": "NJ",
-                    "postalCode": "07960",
-                    "addressCountry": "US"
-                }
-            },
-            "areaServed": {
-                "@type": "Place",
-                "name": "Morris County, NJ",
-                "geo": {
-                    "@type": "GeoCircle",
-                    "geoMidpoint": {
-                        "@type": "GeoCoordinates",
-                        "latitude": 40.7967,
-                        "longitude": -74.4815
-                    },
-                    "geoRadius": "30mi"
-                }
-            },
-            "description": "Professional exterior painting services in Morris County, NJ."
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Exterior Painting",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "George The Painter LLC",
+        "url": "https://www.george-the-painter.com/exterior-painting",
+        "logo": "https://www.george-the-painter.com/logo.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-973-886-5345",
+          "contactType": "Customer Service"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "189 Speedwell Ave",
+          "addressLocality": "Morristown",
+          "addressRegion": "NJ",
+          "postalCode": "07960",
+          "addressCountry": "US"
         }
-    </script>
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Morris County, NJ",
+        "geo": {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": 40.7967,
+            "longitude": -74.4815
+          },
+          "geoRadius": "30mi"
+        }
+      },
+      "description": "Professional exterior painting services in Morris County, NJ."
+    }
+  </script>
 </MainLayout>
